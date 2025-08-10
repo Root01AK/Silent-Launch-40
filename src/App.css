@@ -1,0 +1,309 @@
+.login-container {
+    display: flex;
+    max-width: 800px;
+    margin: 160px auto 40px; /* Added top margin */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  }
+  
+  /* Left image side */
+  .login-image-side {
+    flex: 1;
+    min-height: 500px;
+    align-items: center;
+  }
+  
+  /* Right form side */
+  .login-form-side {
+    flex: 1;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+   
+    
+  }
+  .login-form-side img {
+    align-items: center;
+    
+  }
+  .login-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #222;
+    text-align: left;
+  }
+  
+  .login-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .login-form select,
+  .login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .login-form button.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form button.submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 24px 0 16px;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+  
+  .social-button {
+    flex: 1;
+    padding: 12px 0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .social-button:hover {
+    opacity: 0.85;
+  }
+  
+  .social-google {
+    background-color: #db4437;
+  }
+  
+  .social-facebook {
+    background-color: #3b5998;
+  }
+  
+  .social-twitter {
+    background-color: #1da1f2;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+      max-width: 90vw;
+    }
+    .login-image-side {
+      min-height: 200px;
+    }
+    .login-form-side {
+      padding: 20px 15px;
+    }
+    .social-buttons {
+      flex-direction: column;
+    }
+    .social-button {
+      flex: none;
+      margin-bottom: 10px;
+    }
+    .social-button:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* From Uiverse.io by dexter-st */ 
+.loader-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: white;
+    border-radius: 50%;
+    background-color: transparent;
+    user-select: none;
+  }
+  
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: transparent;
+    animation: loader-rotate 2s linear infinite;
+    z-index: 0;
+  }
+  
+  @keyframes loader-rotate {
+    0% {
+      transform: rotate(90deg);
+      box-shadow:
+        0 10px 20px 0 #fff inset,
+        0 20px 30px 0 #ad5fff inset,
+        0 60px 60px 0 #471eec inset;
+    }
+    50% {
+      transform: rotate(270deg);
+      box-shadow:
+        0 10px 20px 0 #fff inset,
+        0 20px 10px 0 #d60a47 inset,
+        0 40px 60px 0 #311e80 inset;
+    }
+    100% {
+      transform: rotate(450deg);
+      box-shadow:
+        0 10px 20px 0 #fff inset,
+        0 20px 30px 0 #ad5fff inset,
+        0 60px 60px 0 #471eec inset;
+    }
+  }
+  
+  .loader-letter {
+    display: inline-block;
+    opacity: 0.4;
+    transform: translateY(0);
+    animation: loader-letter-anim 2s infinite;
+    z-index: 1;
+    border-radius: 50ch;
+    border: none;
+  }
+  
+  .loader-letter:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .loader-letter:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .loader-letter:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .loader-letter:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .loader-letter:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .loader-letter:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  .loader-letter:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  .loader-letter:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+  .loader-letter:nth-child(9) {
+    animation-delay: 0.8s;
+  }
+  .loader-letter:nth-child(10) {
+    animation-delay: 0.9s;
+  }
+  
+  @keyframes loader-letter-anim {
+    0%,
+    100% {
+      opacity: 0.4;
+      transform: translateY(0);
+    }
+    20% {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+    40% {
+      opacity: 0.7;
+      transform: translateY(0);
+    }
+  }
+
+  /* From Uiverse.io by Spacious74 */ 
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .outer-cont {
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(90deg, #5bfcc4, #f593e4, #71a4f0);
+    border-radius: 12px;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow:
+      inset 0px 0px 5px #ffffffa9,
+      inset 0px 35px 30px #000,
+      0px 5px 10px #000000cc;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .outer-cont::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 12px;
+    filter: blur(0);
+    z-index: -1;
+    box-shadow: none;
+    background: conic-gradient(
+      #00000000 80deg,
+      #40baf7,
+      #f34ad7,
+      #5bfcc4,
+      #00000000 280deg
+    );
+    transition: all 0.3s ease;
+  }
+  .outer-cont:hover::before {
+    filter: blur(15px);
+  }
+  .outer-cont:active::before {
+    filter: blur(5px);
+    transform: translateY(1px);
+  }
+  .outer-cont:active {
+    box-shadow:
+      inset 0px 0px 5px #ffffffa9,
+      inset 0px 35px 30px #000;
+    margin-top: 3px;
+  }
+  
