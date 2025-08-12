@@ -56,7 +56,7 @@ export default function Guidebook() {
         onMouseLeave={() => setIsHovering(false)}
         style={{ cursor: "none" }}
       >
-        <a href="/Guide_Book.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="documents/guide-book.pdf" target="_blank" rel="noopener noreferrer">
           <div className="card-image">
             <img src={guidebook} alt="Guidebook" />
           </div>

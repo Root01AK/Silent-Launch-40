@@ -6,22 +6,22 @@ const features = [
     {
         icon: <FaRocket />,
         title: "Author & Manuscript Protection",    
-        description: "Through adoption of Blockchain technology, decentralized ID is created to avoid duplication and protect copyright infringement."
+        description: "Through the adoption of blockchain technology, a decentralized ID is created to prevent duplication and protect against copyright infringement"
     },
     {   
         icon: <FaShieldAlt />,
         title: "Student-Friendly Publishing Packages",
-        description: "20% discount offered exclusively for university students without any VAT, including Basic, Pro, Elite and ad-hoc selective publishing service(s). "
+        description: "A 20% discount is offered exclusively to university students, with no VAT, covering Basic, Pro, Elite, and ad-hoc selective publishing services"
     },
     {
         icon: <FaHeadset />,
         title: "AI-powered Design tools",
-        description: "AI-driven templates and design options to create stunning book covers and instant illustrations or graphics."
+        description: "AI-driven templates and design options enable the creation of stunning book covers, as well as instant illustrations and graphics"
     },
     {
         icon: <FaSmile />,
         title: "Marketing and Audience Targeting",
-        description: "Predictive Data Analytics and Machine Learning Technology provides tools and insights that allow authors to promote their work efficiently, even without a dedicated marketing team."
+        description: "Predictive data analytics and machine learning technology provide tools and insights that enable authors to promote their work efficiently, even without a dedicated marketing team"
     }
 ];
 

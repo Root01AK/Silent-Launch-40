@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
-
+import favicon from '../assets/favicon.png';
 
 export default function Login() {
   const [role, setRole] = useState("");
@@ -37,7 +37,7 @@ export default function Login() {
   {/* Left Image Side */}
   <div className="login-image-side" aria-label="Login illustration">
     <img 
-      src="src/assets/favicon.png" 
+      src={favicon}
       alt="Login illustration" 
       style={{ width: '100%', height: 'auto' }} 
     />

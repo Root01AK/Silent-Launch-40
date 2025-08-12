@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
-import navlogo from '../assets/Sl40.png';
+import navlogo from '../assets/sl-logo.png';
 import { useAuth } from '../AuthContext'
 
 const Navbar = () => {

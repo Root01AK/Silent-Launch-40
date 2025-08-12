@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router";
 import {
     FaFacebookF,
     FaTwitter,
     FaInstagram,
     FaLinkedinIn,
 } from "react-icons/fa";
-import footerlogo from '../assets/Sl40.png'
+import footerlogo from '../assets/sl-logo.png'
 
 
 const Footer = () => {
@@ -25,24 +26,37 @@ const Footer = () => {
                 <div className="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/package">Packages</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/">→ Home</a></li>
+                        <li><a href="/package">→ Publishing Packages</a></li>
+                        <li><a href="#">→ Author Testimonials</a></li>
+                        <li><a href="/home#Guidebook">→ Publishing Guidebook</a></li>
+                        <li><Link to="/about#faqs">→ FAQs</Link></li>
+                    </ul>
+                </div>
+
+                <div className="footer-links">
+                    <h3>New</h3>
+                    <ul>
+                        <li><a href="#">→ Derby Indie Publishing</a></li>
+                        <li><a href="#">→ Community</a></li>
+                        <li><a href="#">→ Freelancers Hub</a></li>
+                        <li><a href="#">→ Design Templates</a></li>
+                        <li><a href="#">→ Instant Cover Page Generations</a></li>
+                        <li><a href="#">→ SMART Marketing & Distribution</a></li>
                     </ul>
                 </div>
 
                 <div className="footer-links">
                     <h3>Legal Notices</h3>
                     <ul>
-                        <li><a href="/terms">Terms & Conditions</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">→ Terms & Conditions</a></li>
+                        <li><a href="/privacy">→ Privacy Policy</a></li>
                     </ul>
                 </div>
 
                 {/* Social Media */}
                 <div className="footer-social">
-                    <h3>Contact</h3>
+                    <h3>Connect</h3>
                     <div className="social-icons">
                         <a href="#"><FaFacebookF /></a>
                         <a href="#"><FaInstagram /></a>
@@ -52,7 +66,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                © {new Date().getFullYear()} Automation powered with RLogics Solutions, UK and MVP developed by <a href="https://vcraftyucompany.com/" target="_blank"> Vcraftyu Company</a>, India.
+                © {new Date().getFullYear()} Automation powered with <a href="https://rlogicssolutions.com/" target="_blank">RLogics Solutions</a>, UK and MVP developed by <a href="https://vcraftyucompany.com/" target="_blank"> Vcraftyu Company</a>, India.
             </div>
         </footer>
     );

@@ -18,6 +18,8 @@ export default function Plagarism() {
         </div>
         <div class="loader-wrapper">
   <span class="loader-letter">A</span>
+  <span class="loader-letter">I</span>
+  <span class="loader-letter">A</span>
   <span class="loader-letter">g</span>
   <span class="loader-letter">e</span>
   <span class="loader-letter">n</span>

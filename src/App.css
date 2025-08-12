@@ -164,7 +164,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 110%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: transparent;
@@ -307,3 +307,108 @@
     margin-top: 3px;
   }
   
+
+  .workflow-card {
+    text-align: center;
+    padding: 20px;
+    /* max-width: 350px; */
+    margin: auto;
+    height: 100%;
+    
+  }
+  
+  .workflow-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #25C6DB;
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+  }
+  
+  /* Container for better effect */
+  .image-container {
+    overflow: hidden;
+    border-radius: 12px;
+    display: inline-block;
+    width: 950px;
+    height: 530px;
+  }
+  
+  /* Image styling */
+  .workflow-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Option 1: Shaky effect */
+  .image-container:hover .workflow-image {
+    animation: shake 0.5s infinite;
+  }
+  
+  /* Shaky animation */
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  
+  /* Option 2: Water ripple effect */
+  .image-container:hover .workflow-image {
+    animation: ripple 1s infinite;
+  }
+  
+  @keyframes ripple {
+    0% { filter: url('#ripple-filter'); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+  
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  .workflow-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .workflow-image {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .workflow-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .workflow-image {
+    border-radius: 8px;
+  }
+}

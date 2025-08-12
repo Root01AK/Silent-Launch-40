@@ -26,11 +26,10 @@ export default function Packages() {
         {/* Basic Package */}
         <div className="package-item recomanded">
           <div className="package-cost">
-            <p className="package-discount">Basic</p>
-            <p className="package-amt">£ 150</p>
+            <p className="package-discount g-blue">Basic</p>
+            <p className="package-amt">£150</p>
           </div>
           <div className="package-list">
-            <p>Basic Includes of :</p>
             <ul>
               <li>Manuscript Formatting</li>
               <li>Cover Design (Template-Based)</li>
@@ -47,15 +46,14 @@ export default function Packages() {
             </button>
           </div>
         </div>
-
         {/* Pro Package */}
         <div className="package-item">
           <div className="package-cost">
             <p className="package-discount">Pro</p>
-            <p className="package-amt">£ 250</p>
+            <p className="package-amt">£250</p>
           </div>
           <div className="package-list">
-            <p>Pro Includes of</p>
+            
             <ul>
               <li>Professional Manuscript Formatting</li>
               <li>Custom Cover Design</li>
@@ -76,11 +74,10 @@ export default function Packages() {
         {/* Elite Package */}
         <div className="package-item">
           <div className="package-cost">
-            <p className="package-discount">Elite</p>
-            <p className="package-amt">£ 500</p>
+            <p className="package-discount g-green">Elite</p>
+            <p className="package-amt">£500</p>
           </div>
           <div className="package-list">
-            <p>Elite Includes of</p>
             <ul>
               <li>Full Manuscript Editing & Formatting</li>
               <li>Custom Illustrated Cover Design</li>
@@ -94,6 +91,27 @@ export default function Packages() {
           <div className="package-choose-btn">
             <button onClick={() => handleChoose("/support")}>
               Choose Package
+            </button>
+          </div>
+        </div>
+
+        <div className="package-item">
+          <div className="package-cost">
+            <p className="package-discount">Customise</p>
+            <p className="package-amt">£***</p>
+          </div>
+          <div className="package-list">
+            <ul>
+              <li>Project Manager</li>
+              <li>Editor</li>
+              <li>Graphic Designer</li>
+              <li>Digital Marketing</li>
+              <li>Other</li>
+            </ul>
+          </div>
+          <div className="package-choose-btn">
+            <button onClick={() => handleChoose("/contact")}>
+              Enquire
             </button>
           </div>
         </div>
