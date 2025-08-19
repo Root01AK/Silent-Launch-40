@@ -163,13 +163,14 @@
   .loader {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 110%;
+    left: 5;
+    width: 125%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: transparent;
     animation: loader-rotate 2s linear infinite;
     z-index: 0;
+    text-align: center;
   }
   
   @keyframes loader-rotate {
@@ -204,6 +205,13 @@
     z-index: 1;
     border-radius: 50ch;
     border: none;
+    margin-top: 30px;
+    letter-spacing: 0.06em;
+    margin-right: 1%;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
   }
   
   .loader-letter:nth-child(1) {
