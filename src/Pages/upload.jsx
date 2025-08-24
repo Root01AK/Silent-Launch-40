@@ -1,15 +1,21 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useDocs } from "../Components/DocsContext"; // ✅ shared docs state
 
 export default function Upload() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const { addDoc } = useDocs(); // ✅ from context
+  const navigate = useNavigate();
+
 
   const onFileChange = (event) => {
     const file = event.target.files[0];
     if (
       file &&
-      (file.type === "application/msword" || file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+      (file.type === "application/msword" ||
+        file.type ===
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
     ) {
       setSelectedFile(file);
       setErrorMessage("");
@@ -19,22 +25,16 @@ export default function Upload() {
     }
   };
 
-  const onFileUpload = () => {
+  const onFileUpload = (e) => {
+    e.preventDefault();
     if (!selectedFile) return;
 
-    const formData = new FormData();
-    formData.append("myFile", selectedFile, selectedFile.name);
-    console.log(selectedFile);
+    addDoc(selectedFile);
+    console.log("After addDoc call");
 
-    axios
-      .post("api/uploadfile", formData)
-      .then((res) => {
-        console.log("File uploaded successfully");
-      })
-      .catch((err) => {
-        console.error("Upload failed", err);
-      });
+    navigate("/isbn");
   };
+
 
   const fileData = () => {
     if (selectedFile) {
@@ -42,14 +42,19 @@ export default function Upload() {
         <div>
           <h2>File Details:</h2>
           <p>File Name: {selectedFile.name}</p>
-          <p>Last Modified: {selectedFile.lastModifiedDate.toDateString()}</p>
+          <p>
+            Last Modified:{" "}
+            {selectedFile.lastModifiedDate?.toDateString() || "N/A"}
+          </p>
         </div>
       );
     } else {
       return (
         <div>
           <br />
-          <h4 className="upload-warning">Choose a Word file before uploading.</h4>
+          <h4 className="upload-warning">
+            Choose a Word file before uploading.
+          </h4>
         </div>
       );
     }
@@ -59,16 +64,14 @@ export default function Upload() {
     <div className="file-upload-container">
       <div className="file-heading">
         <h1>
-          Upload Your File Here <span> (Only Word format)</span>
+          Upload Your File Here <span>(Only Word format)</span>
         </h1>
       </div>
       <div className="file-upload">
-        <input
-          type="file"
-          onChange={onFileChange}
-          accept=".doc,.docx"
-        />
-        <a href="/isbn" onClick={onFileUpload}>Upload</a>
+        <input type="file" onChange={onFileChange} accept=".doc,.docx" />
+        <a href="/isbn" onClick={onFileUpload}>
+          Upload
+        </a>
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         {fileData()}
       </div>

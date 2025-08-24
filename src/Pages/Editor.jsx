@@ -29,6 +29,8 @@ const Editor = () => {
     navigate("/review-list");
   };
 
+  console.log(docs)
+
   return (
     <div className="editor-container">
       <div className="editor-main">

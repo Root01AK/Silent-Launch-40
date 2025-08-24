@@ -3,37 +3,39 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import male from '../assets/male.jpg'
+import female from  '../assets/female.jpg'
 
 const testimonials = [
   {
-    name: "Praveen Menon",
-    role: "CTO, Monakin Services Pvt. Ltd",
-    text: "This publishing house has become my go-to source for cutting-edge insights in AI, blockchain, and cybersecurity. Their research-backed articles don’t just report trends—they predict them. Every publication feels like a roadmap for the future of tech.",
-    img: "https://randomuser.me/api/portraits/men/32.jpg"
+    name: "Zoe",
+    role: "Research Associate, Derby, UK",
+    text: "Silent Launch will not only edit and format my thesis but also predict its audience reach. Its copyright protection on blockchain will reassure that my work will not be duplicated or misused or claimed. On top of these, I really like the multi-language supported publishing since it will help many users in China, where I graduated from.",
+    img: female
   },
   {
-    name: "Ananya Sharma",
-    role: "VP, Digital Strategy, SecureNet Solutions",
-    text: "In a world overflowing with tech buzzwords, their publications stand out for their clarity and depth. The way they break down complex AI algorithms, blockchain protocols, and security frameworks makes them indispensable for our team’s learning and strategy sessions.",
-    img: "https://randomuser.me/api/portraits/women/44.jpg"
+    name: "Nina",
+    role: "MA Publishing Student, University of Derby, UK",
+    text: "The website looks professional and is easy to navigate. I liked that the prices and different options were laid out clearly so I could see what would best suit me.",
+    img: female
   },
   {
-    name: "Priya Nair",
-    role: "Founder & CEO, ChainAI Technologies",
-    text: "Their work bridges the gap between academic research and real-world application. Whether it’s AI ethics, blockchain adoption, or the latest in cybersecurity defense, they consistently deliver content that is both credible and actionable.",
-    img: "https://randomuser.me/api/portraits/men/75.jpg"
+    name: "Usha",
+    role: " Publishing Professional, India",
+    text: "The affordable student package with manuscript submission to design and print services available on a single publishing platform will be a great benefit. Also, the customisable add-ons to choose our desired service is very nice, considering the limited budget and individual capabilities to manage production and/or design stages. The predictive marketing analytics would be a great tool to see how my book may perform. If this platform is developed, it will transform publishing from manuscript to either shelf or digital, linked with Amazon and eBay.",
+    img: female
   },
   {
-    name: " Dr. Vivek Kumar",
-    role: "Professor of Computer Science, IIT Delhi",
-    text: "As a founder in the AI space, I’ve relied heavily on their publications to stay ahead. They don’t just publish content—they shape conversations in the tech world.",
-    img: "https://randomuser.me/api/portraits/men/75.jpg"
+    name: "Mrinalini",
+    role: "Director, RLogics Solutions, UK",
+    text: "The business case proposal to explore the scope of automation in publishing was presented to us by a student at Derby University for developing the SL 4.0 platform powered with AI, Blockchain, Cybersecurity and Cloud-compliant technologies. The MVP was developed by our offshore partner, Vcraftyu Company with technology backed up by RLogics Solutions, UK.",
+    img: female
   },
   {
-    name: "Alex Mathews",
-    role: "Cybersecurity Analyst, CyberShield Global",
-    text: "Cybersecurity is evolving faster than ever, and this publishing company ensures I never miss a critical update. Their combination of deep technical analysis and business impact reporting is unmatched",
-    img: "https://randomuser.me/api/portraits/women/65.jpg"
+    name: "Karthieswaran",
+    role: "Research Associate, De Montfort University, UK",
+    text: "With Silent Launch’s genre research tools and blockchain-backed copyright and immutability, I will publish my work with confidence, knowing it will be protected and patented in a secured way. In fact, the reference search and citations based on similarity content would be of good use too.",
+    img: male
   }
 ];
 
@@ -58,7 +60,7 @@ export default function Testimonials() {
 
   return (
     <div className="testimonial-wrapper">
-      <h2 className="testimonial-title">Testimonials</h2>
+      <h2 className="testimonial-title"> User Testimonials</h2>
       <Slider {...settings}>
         {testimonials.map((t, i) => (
           <div key={i} className="testimonial-slide">

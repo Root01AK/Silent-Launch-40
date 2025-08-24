@@ -13,30 +13,47 @@ const Support = () => {
             title: "Duplication Checks",
             description: "Detect and prevent duplicate entries in your projects."
         },
-        // {
-        //   title: "Real-time Notifications",
-        //   description: "Get alerts for important updates instantly."
-        // },
-        // {
-        //   title: "Integrated Chat Support",
-        //   description: "Connect with our support team in real-time."
-        // },
-        // {
-        //   title: "API / Plug-in Additions",
-        //   description: "Integrate third-party tools with ease."
-        // },
         {
             title: "Design & Illustration Support",
             description: "Create stunning visuals for your documents."
         },
-        // {
-        //   title: "Reference Management",
-        //   description: "Organize and track references efficiently."
-        // },
-        // {
-        //   title: "Built-in Scalability",
-        //   description: "Easily grow your system with future needs."
-        // },
+        {
+            title: "XML Creation/Metadata Tagging",
+            description: "Make publication easier in different formats"
+        },
+        {
+            title: "Manuscript Service",
+            description: "Provide end-to-end support with publication-readiness."
+        },
+        {
+            title: "Cover Design & Print Services",
+            description: "Create stunning book covers with print-ready"
+        },
+        {
+            title: "Citations & Referencing",
+            description: "Provide more accurate data for scholarly writing"
+        },
+        {
+            title: "Patent Search & Filing Services",
+            description: "Guide researchers in protecting your innovative findings"
+        },
+        {
+            title: "Translation Services",
+            description: "Enabling research dissemination across multiple"
+        },
+        {
+            title: "Copyrights, Licensing & ISBN Registration",
+            description: "Secure academic works with legal rights and global identifiers"
+        },
+        {
+            title: "Marketing & Distribution channels",
+            description: "Promote and distribute your work with wider market presence"
+        },
+        {
+            title: "Predictive Analytics",
+            description: "Apply data analysis to anticipate readership and research impact."
+        },
+
     ];
 
     const supportOptions = [

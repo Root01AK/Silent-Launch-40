@@ -17,8 +17,7 @@ const Footer = () => {
                 <div className="footer-brand">
                     <img src={footerlogo} className="footer-logo" alt="" />
                     <p>
-                        Dive into a world of knowledge, stories, and imagination. Your
-                        gateway to books, authors, and communities that matter.
+                    Quietly launched as a user-friendly Indie Publishing Platform exclusively for students and research scholars in Derby group of institutions, UK.
                     </p>
                 </div>
 
@@ -28,8 +27,8 @@ const Footer = () => {
                     <ul>
                         <li><a href="/">→ Home</a></li>
                         <li><a href="/package">→ Publishing Packages</a></li>
-                        <li><a href="#">→ Author Testimonials</a></li>
-                        <li><a href="/home#Guidebook">→ Publishing Guidebook</a></li>
+                        <li><a href="/#testimonials">→ User Testimonials</a></li>
+                        <li><a href="/FreelancerHub">→ Freelancers Hub</a></li>
                         <li><Link to="/about#faqs">→ FAQs</Link></li>
                     </ul>
                 </div>
@@ -39,7 +38,7 @@ const Footer = () => {
                     <ul>
                         <li><a href="#">→ Derby Indie Publishing</a></li>
                         <li><a href="#">→ Community</a></li>
-                        <li><a href="#">→ Freelancers Hub</a></li>
+                        <li><a href="#">→ Publishing Guidebook</a></li>
                         <li><a href="#">→ Design Templates</a></li>
                         <li><a href="#">→ Instant Cover Page Generations</a></li>
                         <li><a href="#">→ SMART Marketing & Distribution</a></li>

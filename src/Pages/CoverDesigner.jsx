@@ -1,8 +1,13 @@
 import { useEffect, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+
 
 const CoverDesigner = () => {
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
+  const { docId } = useParams();
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const canvasEl = canvasRef.current;
@@ -156,12 +161,15 @@ const CoverDesigner = () => {
         <canvas ref={canvasRef} className="fabric-canvas" />
       </div>
       <div className="canva-nxt-btn-main">
-        <a href="/submit"
+        <button
           className="canva-nxt-btn"
-          onClick={() => alert("Proceed to next step!")}
+          onClick={() => {
+            alert("Proceed to next step!");
+            navigate(`/finalReviewPage/${docId}`);
+          }}
         >
           Next ➠ ➠
-        </a>
+        </button>
       </div>
     </div>
   );

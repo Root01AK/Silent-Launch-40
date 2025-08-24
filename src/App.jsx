@@ -26,43 +26,46 @@ import Support from './Pages/Support'
 import ProtectedRoute from "./ProtectedRoute";
 import Terms from './Pages/terms';
 import Privacy from './Pages/privacy';
+import FinalReviewPage from './Pages/FinalReviewPage'
+import FreelancerHub from './Components/FreelancerHub'
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className='app-main'>
-      <Routes>
-        
-        <Route path="/" element={<Home />} />
-        <Route path="/package" element={<Package />} />
-        <Route path="/file" element={<Upload />} />
-        <Route path="/isbn" element={<ISBN />} />
-        <Route path="/plagarism" element={<Plagarism />} />
-        {/* <Route path="/signin" element={<Signin />} />
+      <div className="app-main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/package" element={<Package />} />
+          <Route path="/file" element={<Upload />} />
+          <Route path="/isbn" element={<ISBN />} />
+          <Route path="/plagarism" element={<Plagarism />} />
+          {/* <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} /> */}
-        <Route path='/login' element={<Login/>}/>
-        <Route path='support' element={<Support/>}/>
-        <Route
-    path="/editor-page"
-    element={
-      <ProtectedRoute >
-        <Editor />
-      </ProtectedRoute>
-    }
-  />
-        <Route path="/review-list" element={<ReviewList />} />
-        <Route path="/review-list/:docId" element={<ReviewDetail />} />
-        <Route path="/edit/:docId" element={<LanguageEditor />} />
-        <Route path="/cover-design/:docId" element={<CoverDesigner />} />
-        <Route path="/arevi" element={<Areview />} />
-        <Route path="/submit" element={<Finalsubmit />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/main" element={<Main />} /> */}
-        <Route path="/about" element={<About />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy" element={<Privacy />} />
-      </Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="support" element={<Support />} />
+          <Route
+            path="/editor-page"
+            element={
+              <ProtectedRoute>
+                <Editor />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/review-list" element={<ReviewList />} />
+          <Route path="/review-detail/:docId" element={<ReviewDetail />} />
+          <Route path="/edit/:docId" element={<LanguageEditor />} />
+          <Route path="/cover-design/:docId" element={<CoverDesigner />} />
+          <Route path="/arevi" element={<Areview />} />
+          <Route path="/submit" element={<Finalsubmit />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/main" element={<Main />} /> */}
+          <Route path="/about" element={<About />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/FreelancerHub" element={<FreelancerHub />} />
+          <Route path="/finalReviewPage/:docId" element={<FinalReviewPage />} />
+        </Routes>
       </div>
       <Footer />
     </>

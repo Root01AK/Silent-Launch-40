@@ -14,7 +14,17 @@ export default function Packages() {
       navigate("/login");
     }
   };
-  
+
+  // New function for Freelancer Hub services
+  // const handleHire = (service) => {
+  //   const path = `/hire/${service.toLowerCase().replace(/\s+/g, "-")}`;
+  //   if (isLoggedIn) {
+  //     navigate(path);
+  //   } else {
+  //     localStorage.setItem("redirectAfterLogin", path);
+  //     navigate("/login");
+  //   }
+  // };
 
   return (
     <div className="package-container">
@@ -40,12 +50,28 @@ export default function Packages() {
               <li>Email Support Only</li>
             </ul>
           </div>
+
           <div className="package-choose-btn">
             <button onClick={() => handleChoose("/support")}>
               Choose Package
             </button>
           </div>
+          <p
+            style={{
+              position: "absolute",
+              bottom: "5px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              fontSize: "13px",
+              color: "#555",
+              marginTop: "8px",
+              textAlign: "center",
+            }}
+          >
+            Valid for 45 days
+          </p>
         </div>
+
         {/* Pro Package */}
         <div className="package-item">
           <div className="package-cost">
@@ -53,7 +79,6 @@ export default function Packages() {
             <p className="package-amt">£250</p>
           </div>
           <div className="package-list">
-            
             <ul>
               <li>Professional Manuscript Formatting</li>
               <li>Custom Cover Design</li>
@@ -64,11 +89,26 @@ export default function Packages() {
               <li>Email & Phone Support</li>
             </ul>
           </div>
+
           <div className="package-choose-btn">
             <button onClick={() => handleChoose("/support")}>
               Choose Package
             </button>
           </div>
+          <p
+            style={{
+              position: "absolute",
+              bottom: "5px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              fontSize: "13px",
+              color: "#555",
+              marginTop: "8px",
+              textAlign: "center",
+            }}
+          >
+            Valid for 90 days
+          </p>
         </div>
 
         {/* Elite Package */}
@@ -88,33 +128,52 @@ export default function Packages() {
               <li>Dedicated Publishing Manager</li>
             </ul>
           </div>
+
           <div className="package-choose-btn">
             <button onClick={() => handleChoose("/support")}>
               Choose Package
             </button>
           </div>
+          <p
+            style={{
+              position: "absolute",
+              bottom: "5px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              fontSize: "13px",
+              color: "#555",
+              marginTop: "8px",
+              textAlign: "center",
+            }}
+          >
+            Valid for 120 days
+          </p>
         </div>
 
+        {/* Customise Package */}
         <div className="package-item">
           <div className="package-cost">
-            <p className="package-discount">Customise</p>
+            <p className="package-discount">Pay-per-Service</p>
             <p className="package-amt">£***</p>
           </div>
           <div className="package-list">
             <ul>
+              <li>Research Support</li>
               <li>Project Manager</li>
-              <li>Editor</li>
+              <li>Editorial Assistant</li>
+              <li>Content Writer</li>
+              <li>Quality Analyst</li>
               <li>Graphic Designer</li>
+              <li>Print Specialist</li>
               <li>Digital Marketing</li>
-              <li>Other</li>
+              <li>Other (please specify)</li>
             </ul>
           </div>
+
           <div className="package-choose-btn">
-            <button onClick={() => handleChoose("/contact")}>
-              Enquire
-            </button>
+            <button onClick={() => handleChoose("/contact")}>Enquire</button>
           </div>
-        </div>
+        </div>        
       </div>
     </div>
   );

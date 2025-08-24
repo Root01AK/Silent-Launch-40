@@ -4,7 +4,7 @@ import workflow from '../assets/workflow.jpeg';
 export default function WorkflowCard() {
   return (
     <div className="workflow-card">
-      <h2 className="workflow-title">Workflow Automation</h2>
+      <h2 className="workflow-title">Workflow</h2>
       <div className="image-container">
         <img
           src={workflow}

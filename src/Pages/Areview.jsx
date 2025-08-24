@@ -80,7 +80,7 @@ export default function Areview() {
         <div className="Areview-title">
           <p>
             Your Book Has been Successfully Reviewed by the Editor & passed all
-            the check.✅
+            the check.
           </p>
         </div>
         <div className="Areview-datas">

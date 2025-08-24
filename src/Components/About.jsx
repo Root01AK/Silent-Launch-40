@@ -10,9 +10,9 @@ export default function About() {
         </div>
         <div className="home-about-right">
             <h1>About SL 4.0</h1>
-            <p>Silent Launch 4.0 is an innovative publishing platform designed to make the journey from manuscript to published book seamless for students and authors alike. The process starts with manuscript upload and ISBN registration. Built-in AI instantly evaluates originality, detects AI-generated text, and—once approved—locks in ownership through blockchain technology. Editorial teams then assess the work using clear guidelines, supported by AI-powered grammar checks and quality scoring. Language specialists fine-tune the writing in the content management system, while authors have the option to create or upload a book cover using integrated Canva design tools.
+            <p>Silent Launch 4.0 is a user-friendly paper-to-digital self-publishing platform developed as an MVP (Minimum Viable Product) with basic functionalities and prototype created as a simple web application with only limited features at testing level. This platform is designed to mainly support Publishing, Arts, Media & Creative Writing students and authors through a streamlined, AI-powered publishing journey offering cost-effective student-only discount publishing packages to choose from. It explores the integration of automation tools within digital publishing services through collaboration with an Cybersecurity & AI solutions provider company based in the UK and an offshore development company
             </p>
-            <a href="/about">Known More</a>
+            <a href="/about">Know More</a>
         </div>
       </div>
     </div>

@@ -1,25 +1,28 @@
 import React from "react";
 
-import { FaRocket, FaShieldAlt, FaHeadset, FaSmile } from "react-icons/fa";
+import { FaShieldAlt, FaGraduationCap, FaBrain } from "react-icons/fa";
+import { IoMdMegaphone } from "react-icons/io";
+
+
 
 const features = [
     {
-        icon: <FaRocket />,
+        icon: <FaShieldAlt />,
         title: "Author & Manuscript Protection",    
         description: "Through the adoption of blockchain technology, a decentralized ID is created to prevent duplication and protect against copyright infringement"
     },
     {   
-        icon: <FaShieldAlt />,
+        icon: <FaGraduationCap />,
         title: "Student-Friendly Publishing Packages",
         description: "A 20% discount is offered exclusively to university students, with no VAT, covering Basic, Pro, Elite, and ad-hoc selective publishing services"
     },
     {
-        icon: <FaHeadset />,
+        icon: <FaBrain />,
         title: "AI-powered Design tools",
         description: "AI-driven templates and design options enable the creation of stunning book covers, as well as instant illustrations and graphics"
     },
     {
-        icon: <FaSmile />,
+        icon: <IoMdMegaphone />,
         title: "Marketing and Audience Targeting",
         description: "Predictive data analytics and machine learning technology provide tools and insights that enable authors to promote their work efficiently, even without a dedicated marketing team"
     }

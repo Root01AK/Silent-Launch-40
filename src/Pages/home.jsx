@@ -20,15 +20,17 @@ const Home = () => {
           forceHoverState={false}
         />
         <h1 className="welcome-text">Welcome to Silent Launch 4.0</h1>
-        <p className="welccome-text">From manuscript to masterpiece - Your complete publishing journey, streamlined with AI and creative tools.</p>
+        <p className="welccome-text">From Paper to Shelf or Digital - Your complete publishing journey, streamlined with AI and Publishing tools.</p>
         <a className="request-demo" href="/contact">Request Demo</a>
       </div>
       <About />
       <WhyChooseUs />
       <Ownership/>
       <Workflow/>
+      <div id="testimonials">
       <Testimonials />
-      <Guidebook />
+      </div>
+      {/* <Guidebook /> */}
     </div>
   );
 };
