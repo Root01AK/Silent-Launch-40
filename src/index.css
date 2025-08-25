@@ -317,7 +317,7 @@ a {
 
 .package-item {
   position: relative;
-  width: 400px;
+  width: 350px;
   height: 440px;
   background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
   border-radius: 10px;
@@ -680,7 +680,9 @@ a {
   width: 100%;
   
 }
-
+.plagarism-view textarea{
+  padding: .5rem 1rem;
+}
 .plagarism-heading {
   
   font-size: 2rem;

@@ -4,7 +4,7 @@ export default function Plagarism() {
   return (
     <div className='plagarism'>
       <div className="plagarism-heading">
-        <h2>Plagarism Checker</h2>
+        <h2>Plagiarism Checker</h2>
       </div>
       <div className="plagarism-view">
         <textarea name="" id="" cols="50" rows={10}></textarea>

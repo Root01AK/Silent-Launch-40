@@ -36,6 +36,12 @@ const testimonials = [
     role: "Research Associate, De Montfort University, UK",
     text: "With Silent Launch’s genre research tools and blockchain-backed copyright and immutability, I will publish my work with confidence, knowing it will be protected and patented in a secured way. In fact, the reference search and citations based on similarity content would be of good use too.",
     img: male
+  },
+  {
+    name: "Praveen Kumar",
+    role: "CTO, Vcraftyu Company, India",
+    text: "The biggest challenge was uniting security, transparency, and scalability in one publishing platform. Content creators needed trust, publishers needed protection, and readers needed authenticity. By blending AI, blockchain, cybersecurity, and cloud, we turned this challenge into an opportunity—delivering a platform that is not just powerful, but future-proof.",
+    img: male
   }
 ];
 

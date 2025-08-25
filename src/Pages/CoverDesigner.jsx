@@ -134,7 +134,7 @@ const CoverDesigner = () => {
 
   return (
     <div className="cover-designer-container">
-      <h2>Canva-like Cover Designer</h2>
+      <h2>Canvas Playground</h2>
 
       <div className="toolbar">
         <button onClick={addText}>Add Text</button>
@@ -155,6 +155,7 @@ const CoverDesigner = () => {
         <button onClick={sendBackward}>Send Backward</button>
         <button onClick={alignCenter}>Align Center</button>
         <button onClick={exportImage}>Export PNG</button>
+        <button >More...(WIP)</button>
       </div>
 
       <div className="canvas-wrapper" ref={wrapperRef}>
@@ -165,7 +166,7 @@ const CoverDesigner = () => {
           className="canva-nxt-btn"
           onClick={() => {
             alert("Proceed to next step!");
-            navigate(`/finalReviewPage/${docId}`);
+            navigate("/isbn");
           }}
         >
           Next ➠ ➠

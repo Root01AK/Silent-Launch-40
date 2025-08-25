@@ -8,6 +8,7 @@ import Testimonials from "../Components/Testimonials";
 import Guidebook from "../Components/Guidebook";
 import Ownership from "../Components/Ownership";
 import Workflow from "../Components/workflow";
+import TechPartners from "../Components/TechPartners";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <WhyChooseUs />
       <Ownership/>
       <Workflow/>
+      <TechPartners />
       <div id="testimonials">
       <Testimonials />
       </div>

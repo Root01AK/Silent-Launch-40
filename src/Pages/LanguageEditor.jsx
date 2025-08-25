@@ -81,7 +81,7 @@ const LanguageEditor = () => {
       <h2 className="language">Language Editing Panel</h2>
 
       <Editor
-        apiKey="xwgtdzqdk58rooxj5m7s2ggvy4hsysq3w0n4c6zmybe8ro7s"
+        apiKey="fvekolg15t998ew165x4y3j61ai6hv7oobjgio8hc9bz4osx"
         onInit={(evt, editor) => (editorRef.current = editor)}
         initialValue="<p>Loading...</p>"
         init={{

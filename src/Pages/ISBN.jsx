@@ -8,15 +8,12 @@ export default function ISBN() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setTypedText(""); // reset for typing effect
-
-    // Simulate processing delay (replace with actual logic)
+    setTypedText(""); 
     setTimeout(() => {
-      window.location.href = "/plagarism";
+      window.location.href = "/finalReviewPage";
     }, 4000);
   };
 
-  // Letter-by-letter typing effect
   useEffect(() => {
     if (loading) {
       let i = 0;
@@ -47,7 +44,7 @@ export default function ISBN() {
 
         <label>
           <input placeholder="" type="email" className="input" />
-          <span>Book Name</span>
+          <span>Email</span>
         </label>
 
         <label>

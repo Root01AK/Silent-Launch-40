@@ -1,122 +1,65 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { useDocs } from "../Components/DocsContext";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 
 const FinalReviewPage = () => {
-  const { docId } = useParams();
-  const { docs } = useDocs();
+  const [showModal, setShowModal] = useState(false);
+  const [showRight, setShowRight] = useState(false); // right section hidden initially
   const navigate = useNavigate();
 
-  const doc = docs.find((d) => d.id === parseInt(docId));
-
-  const [rejected, setRejected] = useState(false);
-  const [approved, setApproved] = useState(false);
-  const [selectedReason, setSelectedReason] = useState("");
-  const [otherReason, setOtherReason] = useState("");
-  const [showRejectionModal, setShowRejectionModal] = useState(false);
-
-  const rejectionReasons = [
-    "Failure to follow submission guidelines",
-    "Language quality",
-    "Plagiarism/Lack of originality",
-    "Low commercial potential",
-    "Other",
-  ];
-
-  if (!doc) return <div className="review-error">Document not found</div>;
-
   return (
-    <div className="review-container">
-      {/* Left Panel */}
-      <div className="review-left">
-        <div className="doc-preview">
-          <div className="doc-preview">
-            <iframe
-              src={doc.fileUrl}
-              title="doc-preview"
-              width="100%"
-              height="600px"
-              frameBorder="0"
-            ></iframe>
+    <div className="finalreview-container">
+      {/* Left Section (always visible) */}
+      <div className="finalreview-right">
+        <div
+          className="finalreview-pdfcheck"
+          onClick={() => setShowModal(true)}
+          style={{ cursor: "pointer" }}
+        >
+          <p>View your full book content here</p>
+        </div>
+        <div className="finalreview-edit-btns">
+          <button className="finalreview-reedit-btn">Edit</button>
+          <button
+            className="finalreview-pdf-btn"
+            onClick={() => setShowRight(true)} // show right when clicked
+          >
+            Create Your Pdf
+          </button>
+        </div>
+      </div>
+
+      {/* Right Section (appears only after Create PDF is clicked) */}
+      {showRight && (
+        <div className="finalreview-left">
+          <div className="finalreview-pdfcomplete">
+            <p>Your Final Book PDF</p>
+          </div>
+          <div className="finalreview-pdf-btns">
+            <button
+              className="finalreview-pdf-btn"
+              onClick={() => navigate("/submit")}
+            >
+              Next
+            </button>
           </div>
         </div>
-        <h3>{doc.name}</h3>
-        <p>
-          <strong>Uploaded by:</strong> {doc.uploadedBy}
-        </p>
-        <p>
-          <strong>Submitted:</strong>{" "}
-          {new Date(doc.submittedAt).toLocaleString()}
-        </p>
-      </div>
+      )}
 
-      {/* Right Panel */}
-      {/* Right Panel */}
-      <div className="review-right">
-        <h3>Editor Review Actions</h3>
-
-        {!approved && !rejected && (
-          <div className="button-group">
-            <button className="btn-accept" onClick={() => setApproved(true)}>
-              Accept
-            </button>
-            <button className="btn-reject" onClick={() => setRejected(true)}>
-              Reject
-            </button>
-          </div>
-        )}
-
-        {approved && (
-          <div>
-            <div className="popup-success">
-              ✅ Document approved successfully!
-            </div>
-            <button
-              className="language-edit-btn"
-              onClick={() => navigate(`/submit`)}
+      {/* Modal Popup */}
+      {showModal && (
+        <div className="finalreview-modal">
+          <div className="finalreview-modal-content">
+            <span
+              className="finalreview-modal-close"
+              onClick={() => setShowModal(false)}
             >
-              Proceed to Final Stage
-            </button>
+              &times;
+            </span>
+            <h2>Book Preview</h2>
+            <p>Here you can display your full book content preview...</p>
           </div>
-        )}
-
-        {rejected && (
-          <div className="rejection-panel">
-            <h4>Reason for Rejection</h4>
-            <ul className="rejection-list">
-              {rejectionReasons.map((reason) => (
-                <li key={reason}>
-                  <label>
-                    <input
-                      type="radio"
-                      name="rejection"
-                      value={reason}
-                      onChange={(e) => setSelectedReason(e.target.value)}
-                    />{" "}
-                    {reason}
-                  </label>
-                </li>
-              ))}
-            </ul>
-
-            {selectedReason === "Other" && (
-              <textarea
-                className="other-reason-input"
-                placeholder="Type your reason here..."
-                value={otherReason}
-                onChange={(e) => setOtherReason(e.target.value)}
-              />
-            )}
-
-            <button
-              className="btn-submit-rejection"
-              onClick={() => setShowRejectionModal(true)}
-            >
-              Submit
-            </button>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

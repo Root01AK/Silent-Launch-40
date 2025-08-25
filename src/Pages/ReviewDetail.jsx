@@ -1,11 +1,13 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useDocs } from '../Components/DocsContext';
-import { useState } from "react";
+import { useDocs } from "../Components/DocsContext";
+import { useState, useEffect, useRef } from "react";
+import { renderAsync } from "docx-preview";
 
 const ReviewDetail = () => {
   const { docId } = useParams();
   const { docs } = useDocs();
   const navigate = useNavigate();
+  const previewRef = useRef(null);
 
   const doc = docs.find((d) => d.id === parseInt(docId));
 
@@ -23,19 +25,54 @@ const ReviewDetail = () => {
     "Other",
   ];
 
+  // 🔑 helper: base64 → ArrayBuffer
+  const base64ToArrayBuffer = (base64) => {
+    const binaryString = window.atob(base64.split(",")[1]); // strip "data:..;base64,"
+    const len = binaryString.length;
+    const bytes = new Uint8Array(len);
+    for (let i = 0; i < len; i++) {
+      bytes[i] = binaryString.charCodeAt(i);
+    }
+    return bytes.buffer;
+  };
+
+  useEffect(() => {
+    if (!doc || !previewRef.current) return;
+
+    previewRef.current.innerHTML = "";
+
+    const isDocx = doc.name.toLowerCase().endsWith(".docx");
+    if (isDocx && doc.fileData) {
+      try {
+        const arrayBuffer = base64ToArrayBuffer(doc.fileData);
+        renderAsync(arrayBuffer, previewRef.current);
+      } catch (err) {
+        console.error("Failed to render docx:", err);
+        previewRef.current.innerText = "Failed to load document preview.";
+      }
+    }
+  }, [doc]);
+
   if (!doc) return <div className="review-error">Document not found</div>;
 
   return (
     <div className="review-container">
       {/* Left Panel */}
       <div className="review-left">
-        <div className="doc-preview">
+        <div
+          className="doc-preview"
+          style={{ height: "100%", overflow: "auto" }}
+        >
+          {doc.name.toLowerCase().endsWith(".docx") ? (
+            <div ref={previewRef} />
+          ) : (
             <iframe
-              src={`https://docs.google.com/viewer?url=${doc.fileUrl}&embedded=true`}
+              src={doc.fileUrl}
               width="100%"
               height="100%"
               frameBorder="0"
-            ></iframe>
+            />
+          )}
         </div>
         <h3>{doc.name}</h3>
         <p>

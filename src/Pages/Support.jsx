@@ -7,15 +7,15 @@ const Support = () => {
         {
             title: "AI-powered Search Engine",
             type: "search", // special type for dummy search
-            description: "Find content instantly with AI precision."
+            description: "Find content instantly with AI precision"
         },
         {
             title: "Duplication Checks",
-            description: "Detect and prevent duplicate entries in your projects."
+            description: "Detect and prevent duplicate entries in your projects"
         },
         {
             title: "Design & Illustration Support",
-            description: "Create stunning visuals for your documents."
+            description: "Create stunning visuals for your documents"
         },
         {
             title: "XML Creation/Metadata Tagging",
@@ -23,11 +23,11 @@ const Support = () => {
         },
         {
             title: "Manuscript Service",
-            description: "Provide end-to-end support with publication-readiness."
+            description: "Provide end-to-end support with publication-readiness"
         },
         {
             title: "Cover Design & Print Services",
-            description: "Create stunning book covers with print-ready"
+            description: "Create stunning book covers with print-ready editions"
         },
         {
             title: "Citations & Referencing",
@@ -39,7 +39,7 @@ const Support = () => {
         },
         {
             title: "Translation Services",
-            description: "Enabling research dissemination across multiple"
+            description: "Enabling research dissemination across multiple languages"
         },
         {
             title: "Copyrights, Licensing & ISBN Registration",
@@ -51,7 +51,7 @@ const Support = () => {
         },
         {
             title: "Predictive Analytics",
-            description: "Apply data analysis to anticipate readership and research impact."
+            description: "Apply data analysis to anticipate readership and research impact"
         },
 
     ];

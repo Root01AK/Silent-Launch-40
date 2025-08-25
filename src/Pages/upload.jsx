@@ -32,7 +32,7 @@ export default function Upload() {
     addDoc(selectedFile);
     console.log("After addDoc call");
 
-    navigate("/isbn");
+    navigate("/plagarism");
   };
 
 

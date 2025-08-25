@@ -36,9 +36,8 @@ const Footer = () => {
                 <div className="footer-links">
                     <h3>New</h3>
                     <ul>
-                        <li><a href="#">→ Derby Indie Publishing</a></li>
-                        <li><a href="#">→ Community</a></li>
-                        <li><a href="#">→ Publishing Guidebook</a></li>
+                        <li><a href="#">→ Derby Indie Publishing Community</a></li>
+                        <li><a href="documents/guide-book.pdf" target="_blank" rel="noopener noreferrer">→ Publishing Guidebook</a></li>
                         <li><a href="#">→ Design Templates</a></li>
                         <li><a href="#">→ Instant Cover Page Generations</a></li>
                         <li><a href="#">→ SMART Marketing & Distribution</a></li>

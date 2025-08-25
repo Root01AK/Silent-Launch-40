@@ -64,7 +64,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/FreelancerHub" element={<FreelancerHub />} />
-          <Route path="/finalReviewPage/:docId" element={<FinalReviewPage />} />
+          <Route path="/finalReviewPage" element={<FinalReviewPage />} />
         </Routes>
       </div>
       <Footer />
