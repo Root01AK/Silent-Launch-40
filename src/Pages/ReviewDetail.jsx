@@ -36,22 +36,36 @@ const ReviewDetail = () => {
     return bytes.buffer;
   };
 
-  useEffect(() => {
-    if (!doc || !previewRef.current) return;
+useEffect(() => {
+  if (!doc || !previewRef.current) return;
 
-    previewRef.current.innerHTML = "";
+  previewRef.current.innerHTML = "";
 
-    const isDocx = doc.name.toLowerCase().endsWith(".docx");
-    if (isDocx && doc.fileData) {
-      try {
+  const isDocx = doc.name.toLowerCase().endsWith(".docx");
+
+  if (isDocx) {
+    try {
+      if (doc.fileData) {
+        // convert base64 → ArrayBuffer
         const arrayBuffer = base64ToArrayBuffer(doc.fileData);
         renderAsync(arrayBuffer, previewRef.current);
-      } catch (err) {
-        console.error("Failed to render docx:", err);
-        previewRef.current.innerText = "Failed to load document preview.";
+      } else {
+        // fallback: fetch blob from fileUrl
+        fetch(doc.fileUrl)
+          .then((res) => res.blob())
+          .then((blob) => renderAsync(blob, previewRef.current))
+          .catch((err) => {
+            console.error("Failed to fetch docx:", err);
+            previewRef.current.innerText = "Failed to load document preview.";
+          });
       }
+    } catch (err) {
+      console.error("Failed to render docx:", err);
+      previewRef.current.innerText = "Failed to load document preview.";
     }
-  }, [doc]);
+  }
+}, [doc]);
+
 
   if (!doc) return <div className="review-error">Document not found</div>;
 

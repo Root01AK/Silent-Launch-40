@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import clickImg from "../assets/clickimg.webp";
-import guidebook from '../assets/guidebook.png'
+import guidebook from '../assets/Prototype.jpg'
 
 // Custom Cursor Component
 function CustomCursor({ cursorImage, cursorSize }) {
@@ -47,7 +47,7 @@ export default function Guidebook() {
       )}
 
       <div className="guidebook-heading">
-        <h2>Guidebook</h2>
+        <h2>Prototype of SL 4.0</h2>
       </div>
 
       <div
@@ -56,12 +56,12 @@ export default function Guidebook() {
         onMouseLeave={() => setIsHovering(false)}
         style={{ cursor: "none" }}
       >
-        <a href="documents/guide-book.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="documents/Prototype_of_SL_4.0.pdf" target="_blank" rel="noopener noreferrer">
           <div className="card-image">
             <img src={guidebook} alt="Guidebook" />
           </div>
           <div className="card-content">
-            <p>Author Guidebook</p>
+            <p>View Now</p>
           </div>
         </a>
       </div>

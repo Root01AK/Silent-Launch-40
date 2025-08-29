@@ -1685,6 +1685,10 @@ a {
   font-family: var(--secondary-font);
 }
 
+.guidebook-heading h2{
+  font-size: 45px;
+}
+
 .testimonial-slide {
   padding: 0 10px;
   /* spacing between slides */
